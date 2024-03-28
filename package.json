@@ -1,0 +1,16 @@
+{
+  "name": "books-api",
+  "scripts": {
+    "start": "platformatic start"
+  },
+  "devDependencies": {
+    "fastify": "^4.26.2",
+    "borp": "^0.10.0"
+  },
+  "dependencies": {
+    "platformatic": "^1.31.0"
+  },
+  "engines": {
+    "node": "^18.8.0 || >=20.6.0"
+  }
+}

@@ -1,0 +1,322 @@
+[
+  {
+    "schema": "public",
+    "table": "versions",
+    "constraints": [
+      {
+        "constraint_catalog": "postgres",
+        "constraint_schema": "public",
+        "constraint_name": "versions_pkey",
+        "table_catalog": "postgres",
+        "table_schema": "public",
+        "table_name": "versions",
+        "constraint_type": "PRIMARY KEY",
+        "is_deferrable": "NO",
+        "initially_deferred": "NO",
+        "enforced": "YES",
+        "nulls_distinct": null,
+        "column_name": "version",
+        "ordinal_position": 1,
+        "position_in_unique_constraint": null,
+        "foreign_table_name": "versions",
+        "foreign_column_name": "version",
+        "foreign_table_schema": "public"
+      }
+    ],
+    "columns": [
+      {
+        "column_name": "version",
+        "udt_name": "int8",
+        "is_nullable": "NO",
+        "is_generated": "NEVER",
+        "data_type": "bigint",
+        "isArray": false
+      },
+      {
+        "column_name": "name",
+        "udt_name": "text",
+        "is_nullable": "YES",
+        "is_generated": "NEVER",
+        "data_type": "text",
+        "isArray": false
+      },
+      {
+        "column_name": "md5",
+        "udt_name": "text",
+        "is_nullable": "YES",
+        "is_generated": "NEVER",
+        "data_type": "text",
+        "isArray": false
+      },
+      {
+        "column_name": "run_at",
+        "udt_name": "timestamptz",
+        "is_nullable": "YES",
+        "is_generated": "NEVER",
+        "data_type": "timestamp with time zone",
+        "isArray": false
+      }
+    ]
+  },
+  {
+    "schema": "public",
+    "table": "authors",
+    "constraints": [
+      {
+        "constraint_catalog": "postgres",
+        "constraint_schema": "public",
+        "constraint_name": "authors_pkey",
+        "table_catalog": "postgres",
+        "table_schema": "public",
+        "table_name": "authors",
+        "constraint_type": "PRIMARY KEY",
+        "is_deferrable": "NO",
+        "initially_deferred": "NO",
+        "enforced": "YES",
+        "nulls_distinct": null,
+        "column_name": "id",
+        "ordinal_position": 1,
+        "position_in_unique_constraint": null,
+        "foreign_table_name": "authors",
+        "foreign_column_name": "id",
+        "foreign_table_schema": "public"
+      }
+    ],
+    "columns": [
+      {
+        "column_name": "id",
+        "udt_name": "uuid",
+        "is_nullable": "NO",
+        "is_generated": "NEVER",
+        "data_type": "uuid",
+        "isArray": false
+      },
+      {
+        "column_name": "name",
+        "udt_name": "text",
+        "is_nullable": "NO",
+        "is_generated": "NEVER",
+        "data_type": "text",
+        "isArray": false
+      },
+      {
+        "column_name": "profile_link",
+        "udt_name": "text",
+        "is_nullable": "YES",
+        "is_generated": "NEVER",
+        "data_type": "text",
+        "isArray": false
+      },
+      {
+        "column_name": "created_at",
+        "udt_name": "timestamp",
+        "is_nullable": "YES",
+        "is_generated": "NEVER",
+        "data_type": "timestamp without time zone",
+        "isArray": false
+      }
+    ]
+  },
+  {
+    "schema": "public",
+    "table": "publishers",
+    "constraints": [
+      {
+        "constraint_catalog": "postgres",
+        "constraint_schema": "public",
+        "constraint_name": "publishers_pkey",
+        "table_catalog": "postgres",
+        "table_schema": "public",
+        "table_name": "publishers",
+        "constraint_type": "PRIMARY KEY",
+        "is_deferrable": "NO",
+        "initially_deferred": "NO",
+        "enforced": "YES",
+        "nulls_distinct": null,
+        "column_name": "id",
+        "ordinal_position": 1,
+        "position_in_unique_constraint": null,
+        "foreign_table_name": "publishers",
+        "foreign_column_name": "id",
+        "foreign_table_schema": "public"
+      }
+    ],
+    "columns": [
+      {
+        "column_name": "id",
+        "udt_name": "uuid",
+        "is_nullable": "NO",
+        "is_generated": "NEVER",
+        "data_type": "uuid",
+        "isArray": false
+      },
+      {
+        "column_name": "name",
+        "udt_name": "text",
+        "is_nullable": "NO",
+        "is_generated": "NEVER",
+        "data_type": "text",
+        "isArray": false
+      },
+      {
+        "column_name": "site_link",
+        "udt_name": "text",
+        "is_nullable": "YES",
+        "is_generated": "NEVER",
+        "data_type": "text",
+        "isArray": false
+      },
+      {
+        "column_name": "created_at",
+        "udt_name": "timestamp",
+        "is_nullable": "YES",
+        "is_generated": "NEVER",
+        "data_type": "timestamp without time zone",
+        "isArray": false
+      }
+    ]
+  },
+  {
+    "schema": "public",
+    "table": "books",
+    "constraints": [
+      {
+        "constraint_catalog": "postgres",
+        "constraint_schema": "public",
+        "constraint_name": "books_pkey",
+        "table_catalog": "postgres",
+        "table_schema": "public",
+        "table_name": "books",
+        "constraint_type": "PRIMARY KEY",
+        "is_deferrable": "NO",
+        "initially_deferred": "NO",
+        "enforced": "YES",
+        "nulls_distinct": null,
+        "column_name": "id",
+        "ordinal_position": 1,
+        "position_in_unique_constraint": null,
+        "foreign_table_name": "books",
+        "foreign_column_name": "id",
+        "foreign_table_schema": "public"
+      },
+      {
+        "constraint_catalog": "postgres",
+        "constraint_schema": "public",
+        "constraint_name": "fk_author_id",
+        "table_catalog": "postgres",
+        "table_schema": "public",
+        "table_name": "books",
+        "constraint_type": "FOREIGN KEY",
+        "is_deferrable": "NO",
+        "initially_deferred": "NO",
+        "enforced": "YES",
+        "nulls_distinct": null,
+        "column_name": "author_id",
+        "ordinal_position": 1,
+        "position_in_unique_constraint": 1,
+        "foreign_table_name": "authors",
+        "foreign_column_name": "id",
+        "foreign_table_schema": "public",
+        "loweredTableWithSchemaName": "books",
+        "foreignEntityName": "author",
+        "entityName": "book"
+      },
+      {
+        "constraint_catalog": "postgres",
+        "constraint_schema": "public",
+        "constraint_name": "fk_publisher_id",
+        "table_catalog": "postgres",
+        "table_schema": "public",
+        "table_name": "books",
+        "constraint_type": "FOREIGN KEY",
+        "is_deferrable": "NO",
+        "initially_deferred": "NO",
+        "enforced": "YES",
+        "nulls_distinct": null,
+        "column_name": "publisher_id",
+        "ordinal_position": 1,
+        "position_in_unique_constraint": 1,
+        "foreign_table_name": "publishers",
+        "foreign_column_name": "id",
+        "foreign_table_schema": "public",
+        "loweredTableWithSchemaName": "books",
+        "foreignEntityName": "publisher",
+        "entityName": "book"
+      }
+    ],
+    "columns": [
+      {
+        "column_name": "id",
+        "udt_name": "uuid",
+        "is_nullable": "NO",
+        "is_generated": "NEVER",
+        "data_type": "uuid",
+        "isArray": false
+      },
+      {
+        "column_name": "author_id",
+        "udt_name": "uuid",
+        "is_nullable": "YES",
+        "is_generated": "NEVER",
+        "data_type": "uuid",
+        "isArray": false
+      },
+      {
+        "column_name": "publisher_id",
+        "udt_name": "uuid",
+        "is_nullable": "YES",
+        "is_generated": "NEVER",
+        "data_type": "uuid",
+        "isArray": false
+      },
+      {
+        "column_name": "title",
+        "udt_name": "text",
+        "is_nullable": "NO",
+        "is_generated": "NEVER",
+        "data_type": "text",
+        "isArray": false
+      },
+      {
+        "column_name": "date_published",
+        "udt_name": "date",
+        "is_nullable": "NO",
+        "is_generated": "NEVER",
+        "data_type": "date",
+        "isArray": false
+      },
+      {
+        "column_name": "isbn",
+        "udt_name": "text",
+        "is_nullable": "YES",
+        "is_generated": "NEVER",
+        "data_type": "text",
+        "isArray": false
+      },
+      {
+        "column_name": "page_count",
+        "udt_name": "int4",
+        "is_nullable": "YES",
+        "is_generated": "NEVER",
+        "data_type": "integer",
+        "isArray": false
+      },
+      {
+        "column_name": "created_at",
+        "udt_name": "date",
+        "is_nullable": "YES",
+        "is_generated": "NEVER",
+        "data_type": "date",
+        "isArray": false
+      },
+      {
+        "column_name": "img_link",
+        "udt_name": "text",
+        "is_nullable": "YES",
+        "is_generated": "NEVER",
+        "data_type": "text",
+        "isArray": false
+      }
+    ]
+  }
+]

@@ -1,0 +1,57 @@
+{
+  "$schema": "https://platformatic.dev/schemas/v1.31.0/db",
+  "db": {
+    "connectionString": "{PLT_BOOKS_DB_DATABASE_URL}",
+    "graphql": true,
+    "openapi": true,
+    "schemalock": true,
+    "limit": {
+      "default": 20,
+      "max": 100
+    }
+  },
+  "authorization": {
+    "adminSecret": "{PLT_AUTH_ADMIN_SECRET_KEY}",
+    "rules": [
+      {
+        "entities": ["book", "author", "publisher"],
+        "role": "platformatic-admin",
+        "find": true,
+        "save": true,
+        "delete": false
+      },
+      {
+        "entities": ["book", "author", "publisher"],
+        "role": "anonymous",
+        "find": true,
+        "save": false,
+        "delete": false
+      }
+    ]
+  },
+  "watch": {
+    "ignore": [
+      "*.sqlite",
+      "*.sqlite-journal"
+    ]
+  },
+  "migrations": {
+    "dir": "migrations",
+    "autoApply": "{PLT_BOOKS_DB_APPLY_MIGRATIONS}"
+  },
+  "plugins": {
+    "paths": [
+      {
+        "path": "./plugins",
+        "encapsulate": false
+      },
+      {
+        "path": "./routes"
+      }
+    ],
+    "typescript": "{PLT_BOOKS_DB_TYPESCRIPT}"
+  },
+  "types": {
+    "autogenerate": true
+  }
+}

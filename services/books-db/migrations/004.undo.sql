@@ -1,0 +1,1 @@
+ALTER TABLE books RENAME COLUMN isbn to isbn10;
